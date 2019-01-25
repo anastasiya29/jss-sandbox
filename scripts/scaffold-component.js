@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
+const getTemplate = require('./scaffold-templates').getTemplate;
 
 /*
   SCAFFOLDING SCRIPT
@@ -36,7 +37,19 @@ if (fs.existsSync(componentManifestDefinitionsPath)) {
   );
 }
 
-const componentOutputPath = scaffoldComponent();
+/*
+Components can be created from different scaffolding templates.
+Use flags when calling the `jss scaffold` command to speficiy which template to use.
+Supported flags:
+* --template=rfc - use template for react functional component
+* --template=rcc - use template for react class component
+*/
+let template = process.argv.find((arg) => arg.indexOf('--template') === 0);
+if (template) {
+  template = template.split('=')[1];
+}
+
+const componentOutputPath = scaffoldComponent(getTemplate(componentName, template));
 
 console.log();
 console.log(chalk.green(`Component ${componentName} has been scaffolded.`));
@@ -70,22 +83,7 @@ if (manifestOutputPath) {
   TEMPLATING FUNCTIONS
 */
 
-function scaffoldComponent() {
-  const exportVarName = componentName.replace(/[^\w]+/g, '');
-
-  const componentTemplate = `import React from 'react';
-import { Text } from '@sitecore-jss/sitecore-jss-react';
-
-const ${exportVarName} = (props) => (
-  <div>
-    <p>${componentName} Component</p>
-    <Text field={props.fields.heading} />
-  </div>
-);
-
-export default ${exportVarName};
-`;
-
+function scaffoldComponent(componentTemplate) {
   const outputDirectoryPath = path.join(componentRootPath, componentName);
 
   if (fs.existsSync(outputDirectoryPath)) {
