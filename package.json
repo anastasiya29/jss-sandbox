@@ -1,16 +1,16 @@
 {
-  "name": "jss-react-demo",
+  "name": "jss-sandbox",
   "description": "Application utilizing Sitecore JavaScript Services and React (create-react-app).",
   "version": "11.0.2",
   "private": true,
   "config": {
-    "appName": "jss-react-demo",
+    "appName": "jss-sandbox",
     "rootPlaceholders": [
       "jss-main"
     ],
-    "sitecoreDistPath": "/dist/jss-react-demo",
+    "sitecoreDistPath": "/dist/jss-sandbox",
     "sitecoreConfigPath": "/App_Config/Include/zzz",
-    "graphQLEndpointPath": "/api/jss-react-demo",
+    "graphQLEndpointPath": "/api/jss-sandbox",
     "language": "en"
   },
   "engines": {
