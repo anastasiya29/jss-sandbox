@@ -1,0 +1,6 @@
+id: locations-emea
+name: EMEA
+displayName: EMEA
+template: jss-sandbox-tag
+fields:
+  value: EMEA

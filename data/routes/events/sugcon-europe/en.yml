@@ -1,0 +1,12 @@
+id: event-sugcon-europe
+template: jss-sandbox-event-page
+fields:
+  pageTitle: Sitecore User Group Conference - Europe
+  description: A conference for Sitecore users and developers.
+  startDate: '2019-04-04T08:00:00.000Z'
+  endDate: '2019-04-05T17:00:00.000Z'
+  location:
+    - id: locations-emea
+placeholders:
+  jss-main:
+  - componentName: EventHeader

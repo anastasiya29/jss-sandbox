@@ -1,0 +1,6 @@
+id: locations-apac
+name: APAC
+displayName: APAC
+template: jss-sandbox-tag
+fields:
+  value: APAC

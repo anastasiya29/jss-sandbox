@@ -1,0 +1,6 @@
+id: locations-amer
+name: Americas
+displayName: Americas
+template: jss-sandbox-tag
+fields:
+  value: Americas
