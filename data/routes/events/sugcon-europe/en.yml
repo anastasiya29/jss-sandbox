@@ -6,7 +6,7 @@ fields:
   startDate: '2019-04-04T08:00:00.000Z'
   endDate: '2019-04-05T17:00:00.000Z'
   location:
-    - id: locations-emea
+    id: locations-emea
 placeholders:
   jss-main:
   - componentName: EventHeader

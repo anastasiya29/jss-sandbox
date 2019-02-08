@@ -9,14 +9,9 @@ const EventHeader = ({ sitecoreContext: { route: { fields } } }) => (
     <DateField field={fields.startDate} render={date => date.toLocaleDateString()} />
     -
     <DateField field={fields.endDate} render={date => date.toLocaleDateString()} />
-
-    {fields.location.map((listItem, index) => (
-      <div key={`sharedListItem-${index}`}>
-        <p>
-          Location: <Text field={listItem.fields.value} />
-        </p>
-      </div>
-    ))}
+    <p>
+      Location: <Text field={fields.location.fields.value} />
+    </p>
   </div>
 );
 
