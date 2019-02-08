@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, RichText, DateField } from '@sitecore-jss/sitecore-jss-react';
+import { withSitecoreContext } from '@sitecore-jss/sitecore-jss-react';
 
-const EventHeader = ({ routeData: { fields } }) => (
+const EventHeader = ({ sitecoreContext: { route: { fields } } }) => (
   <div>
     <Text tag="h2" field={fields.pageTitle} />
     <RichText field={fields.description} />
@@ -19,4 +20,4 @@ const EventHeader = ({ routeData: { fields } }) => (
   </div>
 );
 
-export default EventHeader;
+export default withSitecoreContext()(EventHeader);
