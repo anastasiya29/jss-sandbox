@@ -1,0 +1,12 @@
+id: event-symposium
+template: jss-sandbox-event-page
+fields:
+  pageTitle: Sitecore Symposium - Orlando
+  description: The largest Sitecore event of the year!
+  startDate: '2019-11-04T08:00:00.000Z'
+  endDate: '2019-11-07T17:00:00.000Z'
+  location:
+    id: locations-amer
+placeholders:
+  jss-main:
+  - componentName: EventHeader
