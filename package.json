@@ -97,5 +97,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "externalComponents": {
+    "../../node_modules/sitecore-jss-grid-components/dist/components": [
+      "Grid1Column",
+      "Grid2Column"
+    ]
+  }
 }

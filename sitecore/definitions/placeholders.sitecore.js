@@ -13,6 +13,9 @@ export default function addPlaceholdersToManifest(manifest) {
     // you can optionally pass a GUID or unique (app-wide) string as an ID
     // this will inform the ID that is set when imported into Sitecore.
     // If the ID is not set, an ID is created based on the placeholder name.
-    { name: 'jss-tabs', displayName: 'Tabs', id: 'tabs-placeholder' }
+    { name: 'jss-tabs', displayName: 'Tabs', id: 'tabs-placeholder' },
+    { name: 'grid-1-column', displayName: 'grid-1-column', id: 'grid-1-column' },
+    { name: 'grid-2-column-right', displayName: 'grid-2-column-right', id: 'grid-2-column-right' },
+    { name: 'grid-2-column-left', displayName: 'grid-2-column-left', id: 'grid-2-column-left' },
   );
 }

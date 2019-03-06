@@ -22,6 +22,11 @@ const proxyOptions = {
   watchPaths: ['./data'],
   language: config.language,
   port: process.env.PROXY_PORT || 3042,
+  sourceFiles: [
+    './sitecore/definitions/**/*.sitecore.js',
+    './sitecore/definitions/**/*.sitecore.ts',
+    './node_modules/sitecore-jss-grid-components/sitecore/definitions/**/*.sitecore.js'
+  ],
   onManifestUpdated: (manifest) => {
     // if we can resolve the config file, we can alter it to force reloading the app automatically
     // instead of waiting for a manual reload. We must materially alter the _contents_ of the file to trigger

@@ -15,6 +15,7 @@ require('@babel/register')({
       },
     ],
   ],
+  ignore: [/node_modules\/(?!sitecore-jss-grid-components)/],
   // override React default Babel config
   babelrc: false,
 });
