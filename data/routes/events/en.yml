@@ -1,3 +1,15 @@
 id: events-listing
 fields:
   pageTitle: Sitecore Events 2019
+placeholders:
+  jss-main:
+  - componentName: Grid1Column
+    placeholders:
+      grid-1-column:
+      - componentName: SearchBox
+        fields:
+          searchButtonText: Search
+  - componentName: Grid1Column
+    placeholders:
+      grid-1-column:
+      - componentName: SearchResults
