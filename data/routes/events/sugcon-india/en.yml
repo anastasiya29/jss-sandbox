@@ -7,6 +7,14 @@ fields:
   endDate: '2019-05-17T17:00:00.000Z'
   location:
     id: locations-apac
+  image:
+    src: /data/media/img/bengaluru.jpeg
+    alt: Bengaluru India
+  secondaryImage:
+    src: /data/media/img/sitecore.png
+    alt: Sitecore Logo
+  flag:
+    src: /data/media/img/flags/flag-india.png
 placeholders:
   jss-main:
   - componentName: EventHeader

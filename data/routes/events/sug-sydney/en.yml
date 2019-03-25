@@ -3,10 +3,18 @@ template: jss-sandbox-event-page
 fields:
   pageTitle: Sitecore User Group - Sydney
   description: A local meetup for Sitecore users and developers.
-  startDate: '2019-07-20T08:00:00.000Z'
-  endDate: '2019-02-20T17:00:00.000Z'
+  startDate: '2019-07-20T20:00:00.000Z'
+  endDate: '2019-07-20T22:00:00.000Z'
   location:
     id: locations-apac
+  image:
+    src: /data/media/img/sydney.jpg
+    alt: Sydney, Australia
+  secondaryImage:
+    src: /data/media/img/sitecore.png
+    alt: Sitecore Logo
+  flag:
+    src: /data/media/img/flags/flag-australia.png
 placeholders:
   jss-main:
   - componentName: EventHeader

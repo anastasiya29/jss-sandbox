@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from '@sitecore-jss/sitecore-jss-react';
-import { SearchContext } from '../../lib/SearchContext'
+import { SearchContext } from '../../lib/SearchContext';
+import SearchBar from './SearchBar';
 
 class SearchBox extends React.Component {
 
@@ -38,15 +39,18 @@ class SearchBox extends React.Component {
     return (
       <SearchContext.Consumer>
         {context => (
-          <div>
+          <SearchBar>
             <input type="text"
+              placeholder={fields.searchButtonText.value}
               value={context.search.query}
               onChange={this.handleInputChange.bind(this, context)}
               onKeyPress={this.handleInputKeypress.bind(this, context)} />
-            <button type="button" onClick={this.handleSearchClick.bind(this, context)}>
+            {/*
+              <button type="button" onClick={this.handleSearchClick.bind(this, context)}>
               <Text field={fields.searchButtonText} />
             </button>
-          </div>
+              */}
+          </SearchBar>
         )}
 
       </SearchContext.Consumer>

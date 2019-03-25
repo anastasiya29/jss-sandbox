@@ -7,6 +7,14 @@ fields:
   endDate: '2019-03-28T17:00:00.000Z'
   location:
     id: locations-amer
+  image:
+    src: /data/media/img/atlanta.jpg
+    alt: Atlanta, GA USA
+  secondaryImage:
+    src: /data/media/img/sitecore.png
+    alt: Sitecore Logo
+  flag:
+    src: /data/media/img/flags/flag-usa.png
 placeholders:
   jss-main:
   - componentName: EventHeader

@@ -54,13 +54,42 @@ export class SearchProvider extends React.Component {
                                     name
                                     path
                                     url
-                                    fields(ownFields: false) {
-                                        name
+                                    pageTitle: field(name: "pageTitle") {
                                         value
+                                    }
+                                    description: field(name: "description") {
+                                        value
+                                    }
+                                    startDate: field(name: "startDate") {
+                                        value
+                                    }
+                                    location: field(name: "location") {
+                                        ...ReferenceQuery
+                                    }
+                                    image: field(name: "image") {
+                                        ...ImageQuery
+                                    }
+                                    secondaryImage: field(name: "secondaryImage") {
+                                        ...ImageQuery
+                                    }
+                                    flag: field(name: "flag") {
+                                        ...ImageQuery
                                     }
                                 }
                             }
                             totalCount
+                        }
+                    }
+                }
+                fragment ImageQuery on ImageField {
+                    alt
+                    src
+                }
+
+                fragment ReferenceQuery on ReferenceField {
+                    targetItem {
+                        field(name: "value") {
+                            value
                         }
                     }
                 }

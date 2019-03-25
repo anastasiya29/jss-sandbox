@@ -1,15 +1,19 @@
 id: events-listing
 fields:
   pageTitle: Sitecore Events 2019
+  themePrimaryColor:
+    id: colors-turquoise
+  themeSecondaryColor:
+    id: colors-blue
 placeholders:
   jss-main:
-  - componentName: Grid1Column
+  - componentName: Header
+    fields:
+      heading: Sitecore Community Events
+      subheading: Welcome! Find a local event and join the fun.
     placeholders:
-      grid-1-column:
+      jss-sandbox-header:
       - componentName: SearchBox
         fields:
           searchButtonText: Search
-  - componentName: Grid1Column
-    placeholders:
-      grid-1-column:
-      - componentName: SearchResults
+  - componentName: SearchResults

@@ -1,25 +1,23 @@
 import React from 'react';
-import { SearchContext } from '../../lib/SearchContext'
-
-const SearchResultItem = ({ item: { url, fields } }) => {
-  const getField = fieldName => {
-    const field = fields.find(({ name }) => name === fieldName);
-    return field ? field.value : "";
-  };
-  return (
-    <div>
-      <h4>
-        <a href={url}>{getField("pageTitle")}</a>
-      </h4>
-      <p>{getField("description")}</p>
-    </div>
-  )
-};
+import { SearchContext } from '../../lib/SearchContext';
+import { CardGrid } from '../../theme/Card';
+import Fade from 'react-reveal/Fade';
+import SearchResultTiles from './SearchResultTiles';
+import CardFlip from '../../theme/CardFlip';
 
 const SearchResults = () => (
   <SearchContext.Consumer>
     {context => (
-      context.search.searchResults.map((item, i) => <SearchResultItem item={item} key={i} />)
+      <CardGrid minWidth="350px" margin="0 100px">
+        {context.search.searchResults.map((item, i) => (
+          <Fade key={i} bottom delay={i * 200}>
+            <CardFlip
+              height="230px"
+              front={<SearchResultTiles.Primary item={item} />}
+              back={<SearchResultTiles.Detailed item={item} />} />
+          </Fade>
+        ))}
+      </CardGrid>
     )}
   </SearchContext.Consumer>
 );

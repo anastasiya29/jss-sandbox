@@ -7,6 +7,14 @@ fields:
   endDate: '2019-02-20T17:00:00.000Z'
   location:
     id: locations-emea
+  image:
+    src: /data/media/img/london.jpeg
+    alt: London, United Kingdom
+  secondaryImage:
+    src: /data/media/img/sitecore.png
+    alt: Sitecore Logo
+  flag:
+    src: /data/media/img/flags/flag-united-kingdom.png
 placeholders:
   jss-main:
   - componentName: EventHeader

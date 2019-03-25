@@ -7,6 +7,12 @@ fields:
   endDate: '2019-04-05T17:00:00.000Z'
   location:
     id: locations-emea
+  image:
+    src: /data/media/img/netherlands.jpeg
+    alt: Erasmusbrug, Rotterdam, Netherlands
+  secondaryImage:
+    src: /data/media/img/sitecore.png
+    alt: Sitecore Logo
 placeholders:
   jss-main:
   - componentName: EventHeader

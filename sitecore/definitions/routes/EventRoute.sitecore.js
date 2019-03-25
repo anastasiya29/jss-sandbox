@@ -36,6 +36,21 @@ export default function (manifest) {
         displayName: "Event Location",
         source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/locations`,
         required: false
+      },
+      {
+        name: "image",
+        type: CommonFieldTypes.Image,
+        displayName: "Event Image"
+      },
+      {
+        name: "secondaryImage",
+        type: CommonFieldTypes.Image,
+        displayName: "Event Secondary Image"
+      },
+      {
+        name: "flag",
+        type: CommonFieldTypes.Image,
+        displayName: "Event Location Flag"
       }
     ]
   });

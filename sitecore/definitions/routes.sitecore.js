@@ -2,6 +2,7 @@
 import path from 'path';
 import { Manifest, RouteDefinition, CommonFieldTypes } from '@sitecore-jss/sitecore-jss-manifest';
 import { mergeFs, MergeFsResult } from '@sitecore-jss/sitecore-jss-dev-tools';
+import packageJson from '../../package.json';
 
 /* eslint-enable no-unused-vars */
 
@@ -30,6 +31,20 @@ export default function addRoutesToManifest(manifest) {
         section: appTemplateSection,
         type: CommonFieldTypes.SingleLineText,
       },
+      {
+        name: 'themePrimaryColor',
+        displayName: 'Theme Primary Color',
+        type: CommonFieldTypes.ItemLink,
+        source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/colors`,
+        required: true
+      },
+      {
+        name: 'themeSecondaryColor',
+        displayName: 'Theme Secondary Color',
+        type: CommonFieldTypes.ItemLink,
+        source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/colors`,
+        required: false
+      }
     ],
     insertOptions: ['App Route'],
   });
