@@ -1,0 +1,5 @@
+id: colors-blue
+name: Blue
+template: jss-sandbox-tag
+fields:
+  value: "#4872b1"

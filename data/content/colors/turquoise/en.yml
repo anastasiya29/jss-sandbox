@@ -1,0 +1,5 @@
+id: colors-turquoise
+name: Turquoise
+template: jss-sandbox-tag
+fields:
+  value: "#19A5A2"

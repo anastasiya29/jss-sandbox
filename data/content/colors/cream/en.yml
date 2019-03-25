@@ -1,0 +1,5 @@
+id: colors-cream
+name: Cream
+template: jss-sandbox-tag
+fields:
+  value: "#fed6b7"
