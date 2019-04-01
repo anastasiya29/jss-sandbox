@@ -1,7 +1,6 @@
 import React from 'react';
 import { Placeholder, VisitorIdentification } from '@sitecore-jss/sitecore-jss-react';
 import Helmet from 'react-helmet';
-import { SearchProvider } from './lib/SearchContext';
 import { ThemeProvider } from 'styled-components';
 import './assets/app.css';
 import defaultColors from './colors';
@@ -20,11 +19,10 @@ const Layout = ({ route }) => {
           <title>
             {(route.fields && route.fields.pageTitle && route.fields.pageTitle.value) || 'Page'}
           </title>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"></link>
         </Helmet>
         <VisitorIdentification />
-        <SearchProvider>
-          <Placeholder name="jss-main" rendering={route} />
-        </SearchProvider>
+        <Placeholder name="jss-main" rendering={route} />
       </>
     </ThemeProvider>
   )
