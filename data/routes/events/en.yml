@@ -7,13 +7,27 @@ fields:
     id: colors-blue
 placeholders:
   jss-main:
-  - componentName: Header
-    fields:
-      heading: Sitecore Community Events
-      subheading: Welcome! Find a local event and join the fun.
+  - componentName: Navigation
+  - componentName: SearchContainer
     placeholders:
-      jss-sandbox-header:
-      - componentName: SearchBox
-        fields:
-          searchButtonText: Search
-  - componentName: SearchResults
+      jss-sandbox-search:
+      - componentName: HeaderContainer
+        placeholders:
+          jss-sandbox-header:
+          - componentName: Header
+            fields:
+              heading: Sitecore Community Events
+              element: h1
+              desktopSize: 6
+              tabletSize: 5
+              mobileSize: 4
+              textAlign: center
+          - componentName: Header
+            fields:
+              heading: Welcome! Find a local event and join the fun.
+              textAlign: center
+          - componentName: SearchBox
+            fields:
+              searchButtonText: Search
+              searchPlaceholderText: Search
+      - componentName: SearchResults

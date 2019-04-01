@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Text } from 'rebass';
-import { Card } from '../../theme/Card';
+import { Card } from '../../shared/Card';
 import Moment from 'react-moment';
 
 const Title = styled(Text)`

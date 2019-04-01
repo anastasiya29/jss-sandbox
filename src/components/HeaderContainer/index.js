@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Background from '../../theme/Background';
+import Background from './Background';
+import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
 
 const Container = styled.div`
   min-height: 40vh;
@@ -15,11 +16,13 @@ const Container = styled.div`
   scroll-behavior: smooth;
 `
 
-const HeaderContainer = ({ children }) => (
-    <div style={{ position: 'relative' }}>
-        <Background />
-        <Container>{children}</Container>
-    </div>
+const HeaderContainer = ({ rendering }) => (
+  <div style={{ position: 'relative' }}>
+    <Background />
+    <Container>
+      <Placeholder name="jss-sandbox-header" rendering={rendering} />
+    </Container>
+  </div>
 );
 
 export default HeaderContainer

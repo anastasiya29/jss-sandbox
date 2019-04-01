@@ -3,7 +3,9 @@ a[target='_blank']:after {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("./sc_texture.png");
+  background-repeat: repeat;
 }
 
 /*

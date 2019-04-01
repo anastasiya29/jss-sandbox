@@ -6,4 +6,3 @@ placeholders:
   - componentName: ContentBlock
     fields:
       heading: Welcome to Sitecore JSS
-      content: JSS Sandbox

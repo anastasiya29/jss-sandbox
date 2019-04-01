@@ -1,9 +1,9 @@
 import React from 'react';
 import { SearchContext } from '../../lib/SearchContext';
-import { CardGrid } from '../../theme/Card';
+import { CardGrid } from '../../shared/Card';
 import Fade from 'react-reveal/Fade';
 import SearchResultTiles from './SearchResultTiles';
-import CardFlip from '../../theme/CardFlip';
+import CardFlip from '../../shared/CardFlip';
 
 const SearchResults = () => (
   <SearchContext.Consumer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import TriangleSpring from './TriangleSpring';
+import TriangleSpring from '../../shared/TriangleSpring';
 
 const Background = () => (
     <div>
