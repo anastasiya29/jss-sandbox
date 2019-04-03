@@ -4,7 +4,7 @@ import Background from './Background';
 import { Placeholder } from '@sitecore-jss/sitecore-jss-react';
 
 const Container = styled.div`
-  min-height: 40vh;
+  min-height: 34vh;
   min-width: 320px;
   max-width: 1366px;
   display: flex;
@@ -12,7 +12,7 @@ const Container = styled.div`
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-  padding: 7em 1em 0em 1em;
+  padding: 8em 1em 0em 1em;
   scroll-behavior: smooth;
 `
 

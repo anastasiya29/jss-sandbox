@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
-
+import { SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
+import packageJson from '../../../package.json';
 
 /**
  * Adds the Navigation component to the disconnected manifest.
@@ -12,12 +11,20 @@ export default function (manifest) {
     name: 'Navigation',
     icon: SitecoreIcon.DocumentTag,
     graphQLQuery: `
-    query NavigationQuery($contextItem: String!) {
-      item(path: $contextItem) {
-        name
-        path
-        children {
-          name
+    query NavigationQuery {
+      search(
+        fieldsEqual: [
+          { name: "_fullpath", value: "/sitecore/content/${packageJson.config.appName}/*" },
+          { name: "_templatename", value: "App Route" }
+        ]
+      ) {
+        results {
+          items {
+            item {
+              name
+              url
+            }
+          }
         }
       }
     }`

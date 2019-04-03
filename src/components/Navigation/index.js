@@ -1,10 +1,17 @@
 import React from 'react';
-import { Text } from '@sitecore-jss/sitecore-jss-react';
+import NavBar from './NavBar';
+
+const NavItem = ({ item }) => (
+  <a href={item.url}>{item.name}</a>
+);
 
 const Navigation = ({ fields }) => (
-  <div>
-    <p>Navigation Component</p>
-  </div>
+  <NavBar>
+    {
+      fields.data.search.results.items.map((item, i) =>
+        <NavItem key={i} item={item.item} />)
+    }
+  </NavBar>
 );
 
 export default Navigation;

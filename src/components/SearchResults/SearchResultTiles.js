@@ -38,10 +38,11 @@ const DetailedCard = styled(Card)`
     grid-column-gap: 20px;
 `
 
-const Detailed = ({ item: { pageTitle, description, secondaryImage, startDate, flag } }) => (
+const Detailed = ({ item: { pageTitle, description, secondaryImage, startDate, url } }) => (
     <DetailedCard image={secondaryImage ? secondaryImage.src : null}>
         <Title my={2} pb={1}>{pageTitle.value}</Title>
-        <Text>{startDate.value}</Text>
+        <Moment format="MMM D YYYY">{startDate.value}</Moment>
+        <a href={url}>Register Now</a>
         {description &&
             <Text style={{ overflow: 'auto', alignSelf: 'end' }}>{description.value}</Text>
         }

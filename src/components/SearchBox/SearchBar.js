@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const SearchBar = styled.div`
     display: flex;
     position: relative;
-    margin: 60px 20px 20px;
+    margin: 60px 20px 0 20px;
     ${props => {
         return `border-bottom: 2px solid ${props.theme.colors.grayDark};`
     }}
