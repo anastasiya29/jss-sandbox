@@ -19,7 +19,6 @@ const Layout = ({ route }) => {
           <title>
             {(route.fields && route.fields.pageTitle && route.fields.pageTitle.value) || 'Page'}
           </title>
-          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"></link>
         </Helmet>
         <VisitorIdentification />
         <Placeholder name="jss-main" rendering={route} />

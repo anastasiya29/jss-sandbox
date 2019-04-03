@@ -2,6 +2,11 @@ a[target='_blank']:after {
   content: '\1F5D7'
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src:  url('./fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-image: url("./sc_texture.png");
